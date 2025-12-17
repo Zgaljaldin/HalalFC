@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Clean Header Example</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Inter, Arial, sans-serif; background: #0b0b0c; color: #fff; }
+
+    /* Header — full-width, no gaps */
+    header {
+      background: #0b0b0c;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    /* Header inner container — flex layout, brand on left, nav on right */
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* Nav on the right */
+    nav {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 200ms ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+    }
+
+    .login-btn {
+      background: #fff;
+      color: #0b0b0c;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    .login-btn:hover {
+      opacity: 0.9;
+    }
+
+    .checkout-btn {
+      background: #ffd700;
+      color: #0b0b0c;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    .checkout-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Page content */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    main p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">MyStore</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="checkout-btn">Checkout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to My Store</h1>
+    <p>Clean, professional header with brand on the left and navigation on the right. No white gaps, perfect spacing.</p>
+  </main>
+</body>
+</html>
